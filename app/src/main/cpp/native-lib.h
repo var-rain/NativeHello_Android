@@ -5,8 +5,11 @@
 #ifndef NATIVEHELLO_NATIVE_LIB_H
 #define NATIVEHELLO_NATIVE_LIB_H
 
-
 #include <android/native_activity.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 /*
  * 定义绑定声明周期函数
@@ -88,5 +91,8 @@ void onConfigurationChanged(ANativeActivity *activity);
  */
 void onLowMemory(ANativeActivity *activity);
 
+#ifdef __cplusplus
+}
+#endif
 
 #endif //NATIVEHELLO_NATIVE_LIB_H
